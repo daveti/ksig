@@ -1,0 +1,107 @@
+root@daveti-ThinkCentre-M58e:~/git/ksig# make
+make -C /lib/modules/3.13.0-29-generic/build  M=/root/git/ksig modules
+make[1]: Entering directory `/usr/src/linux-headers-3.13.0-29-generic'
+  CC [M]  /root/git/ksig/signal_kernel.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /root/git/ksig/signal_kernel.mod.o
+  LD [M]  /root/git/ksig/signal_kernel.ko
+make[1]: Leaving directory `/usr/src/linux-headers-3.13.0-29-generic'
+root@daveti-ThinkCentre-M58e:~/git/ksig# ll
+total 144
+drwxr-xr-x 3 root root  4096 Aug 23 06:00 ./
+drwxr-xr-x 4 root root  4096 Aug 23 05:05 ../
+-rw-r--r-- 1 root root   363 Aug 23 05:32 Makefile
+-rw-r--r-- 1 root root    39 Aug 23 06:00 modules.order
+-rw-r--r-- 1 root root     0 Aug 23 06:00 Module.symvers
+-rw-r--r-- 1 root root   333 Aug 23 05:28 README.md
+-rw-r--r-- 1 root root  2550 Aug 23 06:00 signal_kernel.c
+-rw-r--r-- 1 root root  6482 Aug 23 06:00 signal_kernel.ko
+-rw-r--r-- 1 root root   242 Aug 23 06:00 .signal_kernel.ko.cmd
+-rw-r--r-- 1 root root  1246 Aug 23 06:00 signal_kernel.mod.c
+-rw-r--r-- 1 root root  3160 Aug 23 06:00 signal_kernel.mod.o
+-rw-r--r-- 1 root root 29363 Aug 23 06:00 .signal_kernel.mod.o.cmd
+-rw-r--r-- 1 root root  5464 Aug 23 06:00 signal_kernel.o
+-rw-r--r-- 1 root root 38675 Aug 23 06:00 .signal_kernel.o.cmd
+-rwxr-xr-x 1 root root  8980 Aug 23 05:19 signal_user*
+-rw-r--r-- 1 root root  1282 Aug 23 05:19 signal_user.c
+drwxr-xr-x 2 root root  4096 Aug 23 06:00 .tmp_versions/
+root@daveti-ThinkCentre-M58e:~/git/ksig# ll
+total 144
+drwxr-xr-x 3 root root  4096 Aug 23 06:00 ./
+drwxr-xr-x 4 root root  4096 Aug 23 05:05 ../
+-rw-r--r-- 1 root root   363 Aug 23 05:32 Makefile
+-rw-r--r-- 1 root root    39 Aug 23 06:00 modules.order
+-rw-r--r-- 1 root root     0 Aug 23 06:00 Module.symvers
+-rw-r--r-- 1 root root   333 Aug 23 05:28 README.md
+-rw-r--r-- 1 root root  2550 Aug 23 06:00 signal_kernel.c
+-rw-r--r-- 1 root root  6482 Aug 23 06:00 signal_kernel.ko
+-rw-r--r-- 1 root root   242 Aug 23 06:00 .signal_kernel.ko.cmd
+-rw-r--r-- 1 root root  1246 Aug 23 06:00 signal_kernel.mod.c
+-rw-r--r-- 1 root root  3160 Aug 23 06:00 signal_kernel.mod.o
+-rw-r--r-- 1 root root 29363 Aug 23 06:00 .signal_kernel.mod.o.cmd
+-rw-r--r-- 1 root root  5464 Aug 23 06:00 signal_kernel.o
+-rw-r--r-- 1 root root 38675 Aug 23 06:00 .signal_kernel.o.cmd
+-rwxr-xr-x 1 root root  8980 Aug 23 05:19 signal_user*
+-rw-r--r-- 1 root root  1282 Aug 23 05:19 signal_user.c
+drwxr-xr-x 2 root root  4096 Aug 23 06:00 .tmp_versions/
+root@daveti-ThinkCentre-M58e:~/git/ksig# ll
+total 144
+drwxr-xr-x 3 root root  4096 Aug 23 06:00 ./
+drwxr-xr-x 4 root root  4096 Aug 23 05:05 ../
+-rw-r--r-- 1 root root   363 Aug 23 05:32 Makefile
+-rw-r--r-- 1 root root    39 Aug 23 06:00 modules.order
+-rw-r--r-- 1 root root     0 Aug 23 06:00 Module.symvers
+-rw-r--r-- 1 root root   333 Aug 23 05:28 README.md
+-rw-r--r-- 1 root root  2550 Aug 23 06:00 signal_kernel.c
+-rw-r--r-- 1 root root  6482 Aug 23 06:00 signal_kernel.ko
+-rw-r--r-- 1 root root   242 Aug 23 06:00 .signal_kernel.ko.cmd
+-rw-r--r-- 1 root root  1246 Aug 23 06:00 signal_kernel.mod.c
+-rw-r--r-- 1 root root  3160 Aug 23 06:00 signal_kernel.mod.o
+-rw-r--r-- 1 root root 29363 Aug 23 06:00 .signal_kernel.mod.o.cmd
+-rw-r--r-- 1 root root  5464 Aug 23 06:00 signal_kernel.o
+-rw-r--r-- 1 root root 38675 Aug 23 06:00 .signal_kernel.o.cmd
+-rwxr-xr-x 1 root root  8980 Aug 23 05:19 signal_user*
+-rw-r--r-- 1 root root  1282 Aug 23 05:19 signal_user.c
+drwxr-xr-x 2 root root  4096 Aug 23 06:00 .tmp_versions/
+root@daveti-ThinkCentre-M58e:~/git/ksig# insmod ./signal_kernel.ko
+root@daveti-ThinkCentre-M58e:~/git/ksig# ll /sys/kernel/debug
+total 0
+drwx------ 23 root root 0 Aug 18 01:41 ./
+drwxr-xr-x  7 root root 0 Aug 18 01:41 ../
+drwxr-xr-x  2 root root 0 Aug 18 01:41 acpi/
+drwxr-xr-x 30 root root 0 Aug 18 01:41 bdi/
+drwxr-xr-x  2 root root 0 Aug 18 01:42 bluetooth/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 cleancache/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 dma_buf/
+drwxr-xr-x  4 root root 0 Aug 18 01:41 dri/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 dynamic_debug/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 extfrag/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 frontswap/
+-r--r--r--  1 root root 0 Aug 18 01:41 gpio
+drwxr-xr-x  4 root root 0 Aug 18 01:41 hid/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 kprobes/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 kvm/
+drwxr-xr-x  3 root root 0 Aug 18 01:41 kvm-guest/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 mce/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 pinctrl/
+-r--r--r--  1 root root 0 Aug 18 01:41 pwm
+drwxr-xr-x  2 root root 0 Aug 18 01:41 regmap/
+drwxr-xr-x  3 root root 0 Aug 18 01:41 regulator/
+-rw-r--r--  1 root root 0 Aug 18 01:41 sched_features
+--w-------  1 root root 0 Aug 23 06:02 signalconfpid
+-r--r--r--  1 root root 0 Aug 18 01:41 sleep_time
+-r--r--r--  1 root root 0 Aug 18 01:41 suspend_stats
+drwxr-xr-x  7 root root 0 Aug 18 01:41 tracing/
+drwxr-xr-x  3 root root 0 Aug 18 01:41 usb/
+drwxr-xr-x  2 root root 0 Aug 18 01:41 virtio-ports/
+-r--r--r--  1 root root 0 Aug 18 01:41 wakeup_sources
+drwxr-xr-x  2 root root 0 Aug 18 01:41 x86/
+root@daveti-ThinkCentre-M58e:~/git/ksig# ./signal_user
+received value 1234
+root@daveti-ThinkCentre-M58e:~/git/ksig# lsmod | grep signal
+signal_kernel          12558  0 
+root@daveti-ThinkCentre-M58e:~/git/ksig# rmmod signal_kernel
+root@daveti-ThinkCentre-M58e:~/git/ksig# dmesg > dmesg.out
+root@daveti-ThinkCentre-M58e:~/git/ksig# 
+
